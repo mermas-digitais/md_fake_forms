@@ -1,0 +1,138 @@
+/* Reset de margens e preenchimentos */
+body,
+h1,
+form,
+label,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+/* Definindo fontes e cores padrão */
+body {
+  font-family: "Poppins", Arial, sans-serif; /* Fonte Poppins com fallback */
+  color: #333;
+}
+
+/* Estilos para o cabeçalho com a logo e o nome */
+header {
+  background-color: #6b5b95;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  max-width: 100px;
+  height: auto;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+/* Estilização do formulário */
+form {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  font-size: 18px;
+  margin: 10px 0; /* Margens verticais com espaçamento entre os campos */
+  color: #6b5b95;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0; /* Margens verticais com espaçamento entre os campos */
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* Estilização do botão */
+button[type="submit"].loading {
+  position: relative;
+  background-color: #B2D8B2; /* Cor de fundo do botão com carregamento */
+  color: white; /* Cor do texto */
+  border: none; /* Remover a borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Cantos arredondados */
+  cursor: not-allowed; /* Cursor de espera */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[type="submit"].loading i {
+  margin-right: 10px; /* Espaçamento à direita do ícone */
+}
+
+button[type="submit"]:hover {
+  background-color: #AD70CC; /* Cor de fundo do botão no hover */
+}
+
+button[type="submit"].loading:hover {
+  background-color: #B2D8B2; /* Manter a cor de fundo durante o hover */
+}
+
+button[type="submit"].loading:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #6B5B95;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 999;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+form input:focus {
+  outline: none;
+  border-color: #8a51b5;
+}
+/* Estilização das mensagens de erro e sucesso */
+#error-box,
+#submit-box {
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#error-box {
+  background-color: #ffb6b6; /* Vermelho suave */
+  color: #d9534f;
+}
+
+#submit-box {
+  background-color: #b2d8b2; /* Verde suave */
+  color: #3c763d; /* Tom de verde */
+}
