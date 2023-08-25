@@ -1,4 +1,8 @@
 /* Reset de margens e preenchimentos */
+* {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 form,
@@ -56,23 +60,26 @@ form label {
 form input {
   width: 100%;
   padding: 12px;
-  margin: 5px 0; /* Margens verticais com espaçamento entre os campos */
   border: 1px solid #d1d1d1;
   border-radius: 5px;
   font-size: 16px;
 }
 /* Estilização do botão */
-button[type="submit"].loading {
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #a856d1; /* Cor de fundo do botão no hover */
   position: relative;
-  background-color: #B2D8B2; /* Cor de fundo do botão com carregamento */
   color: white; /* Cor do texto */
   border: none; /* Remover a borda */
   padding: 10px 20px; /* Espaçamento interno */
   border-radius: 5px; /* Cantos arredondados */
-  cursor: not-allowed; /* Cursor de espera */
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  gap: 5px;
 }
 
 button[type="submit"].loading i {
@@ -80,26 +87,7 @@ button[type="submit"].loading i {
 }
 
 button[type="submit"]:hover {
-  background-color: #AD70CC; /* Cor de fundo do botão no hover */
-}
-
-button[type="submit"].loading:hover {
-  background-color: #B2D8B2; /* Manter a cor de fundo durante o hover */
-}
-
-button[type="submit"].loading:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  border-top: 3px solid #6B5B95;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  z-index: 999;
+  background-color: #ad70cc; /* Cor de fundo do botão no hover */
 }
 
 @keyframes spin {
@@ -135,4 +123,29 @@ form input:focus {
 #submit-box {
   background-color: #b2d8b2; /* Verde suave */
   color: #3c763d; /* Tom de verde */
+}
+
+/* Page Users */
+
+.container-main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.content-user {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid #8a51b5;
+  border-radius: 10px;
+}
+
+.content-user p {
+  display: block;
+  margin: 0;
+}
+
+.content-user p span {
+  font-weight: 500;
 }

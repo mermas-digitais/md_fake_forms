@@ -1,5 +1,5 @@
 //import firebase from "firebase/compat/app";
-import { set } from "firebase/database";
+
 import { db, firestore } from "./firebaseConfig";
 
 const form = document.querySelector("form") as HTMLFormElement;
@@ -42,8 +42,9 @@ form.addEventListener("submit", async (e) => {
   submitButton.disabled = true;
   submitButton.innerHTML =
     '<i class="fas fa-circle-notch fa-spin"></i> Enviando...'; // Ícone de carregamento
+  submitButton.style.cursor = "not-allowed";
   submitButton.classList.add("loading");
-  console.log(submitButton);
+
   try {
     await firestore.addDoc(docRef, data);
     form.reset();
@@ -66,6 +67,6 @@ form.addEventListener("submit", async (e) => {
       submitButton.disabled = false;
       submitButton.innerHTML = "Marcar presença";
       submitButton.classList.remove("loading");
-    }, 3000);
+    }, 200);
   }
 });
