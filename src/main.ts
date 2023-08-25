@@ -16,7 +16,6 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
-  console.log(data);
 
   const nome = form.nome.value;
   const email = form.email.value;
