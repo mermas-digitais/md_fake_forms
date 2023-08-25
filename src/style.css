@@ -20,24 +20,38 @@ body {
 
 /* Estilos para o cabeçalho com a logo e o nome */
 header {
-  background-color: #6b5b95;
+  background-color: white;
   color: white;
   text-align: center;
   padding: 20px 0;
+  height: 200px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header img {
-  max-width: 100px;
-  height: auto;
+  max-width: 60%;
+  height: 100%;
 }
 
 header h1 {
   font-size: 24px;
   margin-top: 10px;
 }
+.containerImage {
+  width: 100%;
+}
+.containerImage img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: cover;
+
+  max-height: 16px;
+}
+
 
 /* Estilização do formulário */
 form {
@@ -45,14 +59,15 @@ form {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border-radius: 10px;
-  background-color: #f2f2f2;
+  align-items: center;
+  border-radius: 20px;
+  background-color: hsl(274, 53%, 96%);
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 form label {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0; /* Margens verticais com espaçamento entre os campos */
   color: #6b5b95;
 }
@@ -61,24 +76,28 @@ form input {
   width: 100%;
   padding: 12px;
   border: 1px solid #d1d1d1;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+
 }
 /* Estilização do botão */
 
 button[type="submit"] {
-  width: 100%;
-  background-color: #a856d1; /* Cor de fundo do botão no hover */
-  position: relative;
+  
+  max-width: 80%;
+  background-color: #9854CB; /* Cor de fundo do botão no hover */
+  position: center;
   color: white; /* Cor do texto */
   border: none; /* Remover a borda */
   padding: 10px 20px; /* Espaçamento interno */
-  border-radius: 5px; /* Cantos arredondados */
+  border-radius: 10px; /* Cantos arredondados */
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin: 0 auto;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
   gap: 5px;
 }
 
@@ -102,6 +121,75 @@ form input:focus {
   outline: none;
   border-color: #8a51b5;
 }
+.aboutUs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+  
+  padding: 20px;
+}
+.aboutUs img{
+  max-width: 400px;
+  display: block;
+  justify-content: center;
+  width: 70%;
+  object-fit: cover;
+  border-radius: 10px; /* Cantos arredondados */
+  max-height: 100px;
+  
+}
+
+.siga-nos {
+  text-align: center;
+  
+  align-items: center;
+ 
+}
+
+.siga-nos h2 {
+  font-size: 24px;
+  margin: 0px 0px 10px 0px;
+  color: #6B5B95;
+}
+
+.siga-nos p {
+  font-size: 16px;
+  margin: 0px auto 14px auto;
+  width: 80%;
+  max-width: 400px;
+  
+  color: #444;
+}
+
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.redes-sociais a {
+  display: inline-block;
+  
+  margin: 0px 10px;
+}
+
+.redes-sociais a i{
+  position: relative;
+  font-size: 30px;
+  color: #6B5B95;
+  transition:  0.8s  ease-in-out;
+}
+
+.redes-sociais a i:hover {
+font-size: 40px;
+color: #9854CB;
+ 
+}
+
+
 /* Estilização das mensagens de erro e sucesso */
 #error-box,
 #submit-box {
@@ -111,7 +199,12 @@ form input:focus {
   right: 20px;
   padding: 15px;
   border-radius: 5px;
-  font-size: 16px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  max-width: 280px;
+  max-height: 40px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -123,6 +216,12 @@ form input:focus {
 #submit-box {
   background-color: #b2d8b2; /* Verde suave */
   color: #3c763d; /* Tom de verde */
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  max-width: 280px;
+  max-height: 40px;
 }
 
 /* Page Users */

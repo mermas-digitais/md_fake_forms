@@ -1,12 +1,8 @@
-//import firebase from "firebase/compat/app";
-
 import { db, firestore } from "./firebaseConfig";
 
 const form = document.querySelector("form") as HTMLFormElement;
 
 const docRef = firestore.collection(db, "usersData");
-
-//const usersData = await firestore.getDocs(docRef);
 
 const errorContainer = document.querySelector("#error-box") as HTMLDivElement;
 
