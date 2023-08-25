@@ -237,8 +237,6 @@ form input:focus {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .container-header {
   display: flex;
   align-items: center;
@@ -246,14 +244,11 @@ form input:focus {
   margin-bottom: 20px;
 }
 
-
 .container-header h1 {
   font-size: 26px;
-
- 
 }
 .container-header button {
-  width: 8rem;
+  width: 9rem;
   background-color: #a856d1; /* Cor de fundo do botão no hover */
   position: relative;
   color: white; /* Cor do texto */
